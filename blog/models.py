@@ -2,7 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-
+#remember while calling Post.objects.create which btw creates an object of the below class
+#pass 4 arguments for author,title,text,age
 class Post(models.Model):
     author = models.ForeignKey(  settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
